@@ -1,19 +1,19 @@
-.main-container, movie-list-container{
+/* .main-container, movie-list-container{
   display:flex;
   flex-direction: column;
   align-items: center;
   
-}
+} */
 .movie-list{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
 }
-.movie-card{
-  width: 600px;
-  padding: 8px;
+.single-movie{
+  width: 300px;
+  padding: 3px;
 }
-.movie-card img{
+.single-movie img{
   width: 50%;
 }
 
