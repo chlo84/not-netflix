@@ -7,7 +7,9 @@ function App() {
     <div className="App">
       <h1>Hello World</h1>
       <SingleMovie id='13'/>
-      <MovieList list= 'trending/movie/week'/>
+      {/* <MovieList list= 'trending/movie/week'/> */}
+      <MovieList list = 'search/keyword' query = 'fire'/>
+        
     </div>
   );
 }
