@@ -1,0 +1,24 @@
+.main-container, movie-list-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.movie-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.movie-card{
+  width: 600px;
+  padding: 8px;
+}
+.movie-card img{
+  width: 50%;
+}
+
+
+
+
+
+
