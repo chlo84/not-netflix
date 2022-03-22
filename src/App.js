@@ -24,11 +24,12 @@ function App() {
       <div className="App">
         <h1>Fabulous Flix</h1>
         <SearchBar title='search'  />
-        <ReactPlayer url ='https://www.youtube.com/watch?v=ahy17q1vEWw'/>
         <SingleMovie id='14736'/>
+      <div className='movie-preview'>
+        <ReactPlayer url ='https://www.youtube.com/watch?v=ahy17q1vEWw'/>
+        </div>  
+
         <MovieList list='trending/movie/week'/>
-
-
       </div>
     </GenreContext.Provider>
 
