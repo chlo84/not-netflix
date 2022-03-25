@@ -20,17 +20,19 @@ function App() {
   }, [])
 
   return (
+
     <GenreContext.Provider value={[tvGenres, movieGenres]}>
 
       <div className="App">
-        <h1>Fabulous Flix</h1>
-        <SearchBar title='search'  />
+        <div className='SearchHeader'>
+          <h1>Fabulous Flix</h1>
+          <SearchBar/>
+        </div>
+        <ReactPlayer url ='https://www.youtube.com/watch?v=ahy17q1vEWw'
+        width={1200}
+        height={600}
+        />
         <SingleMovie id='14736'/>
-        
-      <div className='movie-preview'>
-        <ReactPlayer url ='https://www.youtube.com/watch?v=ahy17q1vEWw'/>
-        </div>  
-
         <MovieList list='trending/movie/week'/>
       </div>
     </GenreContext.Provider>

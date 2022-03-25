@@ -18,17 +18,13 @@ export default function SearchBar(props){
     }
     console.log(searchName)
     return <div>
-        <h1>SearchBar</h1>
+       
         <input value={searchName} onChange={handleChange}></input>
         <input onClick={searchMovies} type= 'submit'/>
         <MovieList title = {props.title} movies ={movies} genres ={props.genres}/>
 
 
-        {/* <h2>{props.title}</h2>
-        <div className='movie-list'>
-            {movies.map(movie => <SingleMovie key={movie.id}movie={movie}/>)}
-
-        </div> */}
+       
     
         
         
