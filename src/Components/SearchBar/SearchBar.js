@@ -12,8 +12,6 @@ export default function SearchBar(props){
         fetchMoviesFromDatabase(`search/multi`, `&query=${searchName}`)
             .then(res => setMovies(res.results))
     }
-        
-        
     
     function handleChange(event){
         setSearchName(event.target.value)

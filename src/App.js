@@ -6,6 +6,7 @@ import SearchBar from './Components/SearchBar/SearchBar';
 import { useEffect, useState } from "react"
 import { fetchMoviesFromDatabase, GenreContext } from './NetworkConnections'
 import ReactPlayer from 'react-player';
+import React from 'react';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <h1>Fabulous Flix</h1>
         <SearchBar title='search'  />
         <SingleMovie id='14736'/>
+        
       <div className='movie-preview'>
         <ReactPlayer url ='https://www.youtube.com/watch?v=ahy17q1vEWw'/>
         </div>  
