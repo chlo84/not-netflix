@@ -3,6 +3,7 @@ import { fetchMoviesFromDatabase } from "../../NetworkConnections"
 import SingleMovie from "../SingleMovie/SingleMovie";
 import MovieList from "../MovieList/MovieList";
 
+
 export default function SearchBar(props){
     
     const [movies, setMovies] = useState([])
@@ -22,7 +23,7 @@ export default function SearchBar(props){
         <input value={searchName} onChange={handleChange}></input>
         <input onClick={searchMovies} type= 'submit'/>
         <MovieList title = {props.title} movies ={movies} genres ={props.genres}/>
-
+      
 
        
     
