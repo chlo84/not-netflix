@@ -9,9 +9,12 @@ import ReactPlayer from 'react-player';
 import React from 'react';
 
 
+
 function App() {
   const [tvGenres, setTvGenres] = useState([])
   const [movieGenres, setMovieGenres] = useState([])
+  
+  
   useEffect(() => {
     fetchMoviesFromDatabase(`genre/movie/list`)
       .then(res => setMovieGenres(res.genres))
@@ -28,7 +31,7 @@ function App() {
           <h1>Fabulous Flix</h1>
           <SearchBar/>
         </div>
-        <ReactPlayer url ='https://www.youtube.com/watch?v=ahy17q1vEWw'
+        <ReactPlayer playing={true} muted={true} url ='https://www.youtube.com/watch?v=Ur83i6_BjbE'
         width={1200}
         height={600}
         />

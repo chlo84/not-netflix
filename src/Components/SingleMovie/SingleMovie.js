@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react"
 import { fetchMoviesFromDatabase, GenreContext } from "../../NetworkConnections"
 import {Link} from "react-router-dom"
 
+
 export default function SingleMovie(props){
     const [movie, setMovie] = useState(props.movie)
     const [movies, setMovies] = useState([])
@@ -26,8 +27,8 @@ export default function SingleMovie(props){
         {/* <p>{movie?.overview}</p> */}
         <p>{movie?.genre_ids?.map(genre_id => <p>{genres?.find(genre => genre.id === genre_id)?.name}</p>)}</p> 
         {/* <Link to = {`/movie/${movie.id}`} state={{movie}}> */}
-            <button>Click Here for More Info</button>
-            {/* </Link> */}
+        
+            
        
     </div>
 } 
