@@ -28,8 +28,9 @@ function App() {
 
       <div className="App">
         <div className='SearchHeader'>
-          <h1>Fabulous Flix</h1>
-          <SearchBar/>
+        <h1>Fabulous Flix</h1>
+        <a target="_blank" href="http://codepen.io/Moslim/" className="white-mode">Fabulous Flixx</a>
+        <SearchBar/>
         </div>
         <ReactPlayer playing={true} muted={true} url ='https://www.youtube.com/watch?v=Ur83i6_BjbE'
         width={1200}
