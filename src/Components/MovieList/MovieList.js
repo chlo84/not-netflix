@@ -19,7 +19,7 @@ export default function MovieList(props){
     return <div className='movie-list-container'> 
         <h2>{props.title}</h2>
         <div className='movie-list'>
-            {movies?.map(movie => <SingleMovie key={movie.id}movie={movie} genres ={props.genres}/>)}
+            {movies?.map(movie => <SingleMovie key={movie.id}movie={movie} genres ={props.genres} setShowMovie={props.setShowMovie} showMovie={props.showMovie}/>)}
 
         </div>
     </div>

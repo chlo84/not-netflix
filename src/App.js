@@ -13,8 +13,8 @@ import React from 'react';
 function App() {
   const [tvGenres, setTvGenres] = useState([])
   const [movieGenres, setMovieGenres] = useState([])
-  
-  
+  const [showMovie, setShowMovie] = useState(null)
+  console.log(showMovie)
   useEffect(() => {
     fetchMoviesFromDatabase(`genre/movie/list`)
       .then(res => setMovieGenres(res.genres))
@@ -28,16 +28,18 @@ function App() {
 
       <div className="App">
         <div className='SearchHeader'>
-        <h1>Fabulous Flix</h1>
-        <a target="_blank" href="http://codepen.io/Moslim/" className="white-mode">Fabulous Flixx</a>
+         <div className='FFtitle'>
+          <h1>Fabulous Flix</h1>
+         </div>
         <SearchBar/>
         </div>
         <ReactPlayer playing={true} muted={true} url ='https://www.youtube.com/watch?v=Ur83i6_BjbE'
         width={1200}
         height={600}
         />
-        <SingleMovie id='14736'/>
-        <MovieList list='trending/movie/week'/>
+        {/* <SingleMovie id='14736'/> */}
+        {showMovie?.id? <div>{showMovie.title}</div> : null}
+        <MovieList list='trending/movie/week' setShowMovie={setShowMovie} showMovie={showMovie}/>
       </div>
     </GenreContext.Provider>
 

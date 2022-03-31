@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react"
 import { fetchMoviesFromDatabase, GenreContext } from "../../NetworkConnections"
-import {Link} from "react-router-dom"
+
 
 
 export default function SingleMovie(props){
@@ -8,8 +8,9 @@ export default function SingleMovie(props){
     const [movies, setMovies] = useState([])
     const [searchName, setSearchName] = useState('')
     const genres = useContext(GenreContext)[movie?.original_title ? 1 : 0]
+   
 
-    console.log(genres)
+    // console.log(genres)
     
     useEffect(() =>{
         if(movie) return
@@ -17,7 +18,8 @@ export default function SingleMovie(props){
             .then(res => setMovie(res))
         
     },[])
-    console.log(movie?.genres_ids)
+    console.log(props.showMovie)
+    // console.log(movie?.genres_ids)
     // Grab the genre name based on genre id
     
     // find a genre with an id same as movie.genre_id
@@ -26,7 +28,7 @@ export default function SingleMovie(props){
         {movie && <img alt={`poster for ${movie?.original_title}`} src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}/>}
         {/* <p>{movie?.overview}</p> */}
         <p>{movie?.genre_ids?.map(genre_id => <p>{genres?.find(genre => genre.id === genre_id)?.name}</p>)}</p> 
-        {/* <Link to = {`/movie/${movie.id}`} state={{movie}}> */}
+        <button onClick = {()=> props.setShowMovie(movie)}>show movie</button>
         
             
        

@@ -22,7 +22,8 @@ export default function SearchBar(props){
        
         <input value={searchName} onChange={handleChange}></input>
         <input onClick={searchMovies} type= 'submit'/>
-        <MovieList title = {props.title} movies ={movies} genres ={props.genres}/>
+        <MovieList title = {props.title} movies ={movies} genres ={props.genres} className='movietag'/>
+
       
 
        
