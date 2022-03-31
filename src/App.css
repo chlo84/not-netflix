@@ -1,11 +1,8 @@
-/* body{
-  background-color: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(187,58,84,1) 100%);
-} */
 @import url('https://fonts.googleapis.com/css?family=Cairo');
+
 body {
-  background-color: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(187,58,84,1) 100%);
+  background-color: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(187, 58, 84, 1) 100%);
 }
 
 .FFtitle h1 {
@@ -17,10 +14,10 @@ body {
   text-transform: uppercase;
   font-size: 120px;
   margin: 10px 0;
-  
+
 }
 
-.FFtitle{
+.FFtitle {
   font-family: "Cairo";
   text-align: center;
   color: #FFF;
@@ -32,42 +29,39 @@ body {
   line-height: 2;
 }
 
-.App{
-  max-width: 1200px;
+.App {
+  width: 95vw;
+  overflow: auto;
   margin: 10px;
 }
-.movie-list{
-  display: flex; 
-  overflow: scroll;
+
+.movie-list {
+  display: flex;
   flex-direction: row;
-  width: max-content;
-  align-items: center; 
-  
- 
-  /* flex-wrap: wrap;  */
+  align-items: center;
 }
-.single-movie{
+
+.single-movie {
   width: 300px;
-  height: 500px;
+  height: 750px;
   padding: 3px;
   margin: 10px;
   border: 1px solid;
   text-align: center;
-}
-.single-movie img{
-  width: 95%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.SearchHeader{
+.single-movie img {
+  width: 285px;
+}
+
+.SearchHeader {
   display: flex;
   justify-content: space-around;
-   
 }
 
-.movietag{
-  background-color: transparent;
-  height: 0px;
-  width: 0px;
+.movietag {
+  display: flex;
+  flex-wrap: wrap;
 }
-
