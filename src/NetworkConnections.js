@@ -1,6 +1,6 @@
 import { createContext } from "react"
 
-export const API_KEY = '22812a0967bbe11831dee7e67fa34314'
+export const API_KEY = process.env.REACT_APP_API_KEY
 export const GenreContext = createContext('genres')
 export const fetchMoviesFromDatabase =(route, params='') => {
    console.log(params)
