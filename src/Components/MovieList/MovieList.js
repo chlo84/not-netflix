@@ -8,7 +8,7 @@ export default function MovieList(props) {
         if (movies) return
         fetchMoviesFromDatabase(props.list)
             .then(res => setMovies(res.results));
-
+    // eslint-disable-next-line    
     }, [])
 
     useEffect(() => {

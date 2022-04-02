@@ -17,7 +17,7 @@ export default function SingleMovie(props){
         if(movie) return
         fetchMoviesFromDatabase(`movie/${props?.id}`)
             .then(res => setMovie(res))
-        
+    // eslint-disable-next-line   
     },[])
     console.log(props.showMovie)
     // console.log(movie?.genres_ids)

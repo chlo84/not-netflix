@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { fetchMoviesFromDatabase } from "../../NetworkConnections"
-import SingleMovie from "../SingleMovie/SingleMovie";
 import MovieList from "../MovieList/MovieList";
 
 
